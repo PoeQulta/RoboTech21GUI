@@ -1,0 +1,201 @@
+html, body {
+    overflow-y: overlay;
+}
+.narrow {
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+.narrow h1 {
+    font-size: 2.4rem;
+  }
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: #1EBBA3;
+  background-color: #1EBBA3;
+  color: white;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: #189582;
+  background-color: #189582;
+  color: white;
+}
+
+.navbar
+{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background: rgba(0,0,0,0.6) !important;
+}
+.navbar-brand img
+{
+  height: 3rem;
+}
+.navbar-brand li
+{
+  padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link
+{
+  color: white;
+  padding-top: .8rem;
+
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover
+{
+  color: #e9962b;
+}
+  /*---   Landing Page--*/
+
+.home-inner
+{
+  background-image: url(img/ROVs.png);
+}
+.connect-row
+{
+  width: 75%;
+  max-width: 100%;
+  position: absolute;
+  top: 20%;
+  z-index: 1;
+  text-transform: uppercase;
+  color: white;
+}
+.caption h3
+{
+  text-align: center;
+  color: #e9962b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1rem;
+}
+.sockets
+{
+  padding-left: 5%;
+}
+.form-control
+{
+  background: rgba(0,0,0,0.6);
+  color:#e9962b;
+  padding-bottom: .6rem;
+}
+input:focus{
+  outline: none;
+}
+
+input[type="numbers"]{
+  border-radius: 5px;
+}
+.btn-lg
+{
+  border-width: medium;
+  border-radius: 8px;
+  padding: .6rem 1.3rem;
+  font-size: 1.6rem;
+}
+.diagnostics img
+{
+  display: block;
+  width: 20%;
+}
+.diagnostics .border{
+  width: 450px;
+}
+.stopwatch {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 23px;
+  width: 100%;
+  padding-left: 100px; 
+}
+
+.stopwatch-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+  width: 200px;
+
+  border: #a8a8a8 2px solid;
+  border-radius: 20px;
+  box-shadow: 0px -2px 10px 1px rgba(215, 80, 23, 0.75) inset, 0px 5px 20px -10px #222;
+  /*border-radius: 50%;*/
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 187px;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+button:focus{
+  outline: none;
+}
+
+#playButton {
+  display: block;
+}
+
+#pauseButton {
+  display: none;
+}
+.border
+{
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-radius: 20px;
+}
+.border p
+{
+  padding-left: 1rem;
+}
+.border label
+{
+  text-align: center;
+  padding-left: 1rem;
+}
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

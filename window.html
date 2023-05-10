@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Robo-Tech UI -test-</title>
+	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fixed.css">
+</head>
+
+  <body data-spy="scroll" data-target="#navbarResponsive">
+  	<!--- Start Connect Section-->
+    <div id="connect" class="offset">
+    	<!-- Navigation-->
+    	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">	
+    		<a class="navbar-brand" href="#"><img src="img/logoEdited.png"/></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        	</button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+    			<ul class="navbar-nav ml-auto">
+    				<li class="nav-item">
+    					<a class="nav-link" href="#connect">Connection</a>
+    				</li>
+    				<li class="nav-item">
+    					<a class="nav-link" href="#diagnostics">Diagnostics</a>
+    				</li>
+    				<li class="nav-item">
+    					<a class="nav-link" href="#task1">Task-1</a>
+    				</li>
+    				<li class="nav-item">
+    					<a class="nav-link" href="#task2">Task-2</a>
+    				</li>
+    				<li class="nav-item">
+    					<a class="nav-link" href="#task3">Task-3</a>
+    				</li>
+    			</ul>
+    		</div>
+    	</nav>
+    	<!-- End Navigation-->
+    	<!---Landing Page-->
+    	<div class="landing">
+    		<div class="home-warp">
+    			<div class="home-inner">
+    				
+    			</div>
+    		</div>
+    		
+    	</div>
+    	<!---End Landing Page-->
+    	<div class="container">
+    		<div class="row connect-row">
+    		<div class="caption sockets col-md-6">
+    		<!--- UDP setup-->
+    		<h3>Sockets</h3>
+        		<div class="form-group">
+    				<label for="trgtip">Target Ip</label>
+    				<input type="text" class="form-control mb-3" id="UdpIpTarget" placeholder="192.168.0.128">
+    				<label for="port">Target Port</label>
+    				<input type="text" class="form-control mb-3" id="UdpPortTarget" placeholder="8080">
+    				<label for="selfIp">Self Ip</label>
+    				<input type="text" class="form-control mb-3" id="UdpIpSelf" placeholder="192.168.0.127">
+    				<label for="SelfPort">Self Port</label>
+    				<input type="text" class="form-control mb-3" id="UdpPortSelf" placeholder="8080">
+    				<div class="text-center sckbtn">
+    					<button class="btn btn-outline-light btn-lg mt-3" id="btnUdpSubmit">Connect</button> 
+    				</div>
+    		<!--- End UDP setup-->
+    			</div>
+    	</div>
+    	<div class="col-md-6 caption">
+    		<!--- UDP setup-->
+    		<h3>com-port</h3>
+        		<div class="form-group">
+    				<label for="port">Select Port</label>
+    				<Select class="form-control" id="selectComport"></Select>
+    				<div class="text-center sckbtn">
+					<button class="btn btn-outline-light btn-lg mt-3" id="btnComSubmit" onclick="btnUdpHandle">Connect</button> 
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+    <!--- End Connect Section-->
+
+    <!--- Start Diagnostics Section-->
+    <div id="diagnostics" class="offset">
+    	<div class="jumbotron">
+    		<div class="narrow">
+    			<div class="d-flex justify-content-between">
+					<div>
+						<h1 class="heading">Diagnostics</h1>
+					</div>
+					<div>
+						<div class="stopwatch">
+							<div class="stopwatch-border">
+								<span class="time" id="display">00:00:00</span>
+							</div>
+							<div class="controls">
+								<button class="buttonPlay pl-4">
+								  <img id="playButton" src="img/playbtn_64px.png"/>
+						
+								  <img id="pauseButton" src="img/pausebtn.png" />
+								</button>
+						
+								<button class="buttonReset pr-4">
+								  <img id="resetButton" src="img/stopbtn_64.png"/>
+								</button>
+							  </div>
+						</div>
+					</div>
+				</div>
+		
+    			<div class="row">
+    				<div class="col-md-4">
+    					<div class="diagnostics">
+    						<img class="center" src="img/Joystick.png">
+    						<h3>Joystick</h3>
+    						<div class="border border-warning col-md-12"id="Axes">
+    							<p class="lead">
+    								<span>Axis 0:</span>
+    								<span id="Axis-0">0</span>
+    							</p>
+    							<p class="lead">
+    								<span>Axis 1:</span>
+    								<span id="Axis-1">0</span>
+    							</p>
+    							<p class="lead">
+    								<span>Axis 2:</span>
+    								<span id="Axis-2">0</span>
+    							</p>
+    							<p class="lead">
+    								<span>Axis 3:</span>
+    								<span id="Axis-3">0</span>
+    							</p>
+    						</div>
+    						<div class="border border-warning col-md-12"id="Btns">
+    							<p class="lead">
+    								<span>Btn 0:</span>
+    								<input type="checkbox"  id="chkboxBtn0">
+    								<span>Btn 1:</span>
+    								<input type="checkbox"  id="chkboxBtn1">
+    								<span>Btn 2:</span>
+    								<input type="checkbox"  id="chkboxBtn2">
+    							</p>
+    							<p class="lead">
+    								<span>Btn 3:</span>
+    								<input type="checkbox"  id="chkboxBtn3">
+    								<span>Btn 4:</span>
+    								<input type="checkbox"  id="chkboxBtn4">
+    								<span>Btn 5:</span>
+    								<input type="checkbox"  id="chkboxBtn5">
+    							</p>
+    							<p class="lead">
+    								<span>Btn 6:</span>
+    								<input type="checkbox"  id="chkboxBtn6">
+    								<span>Btn 7:</span>
+    								<input type="checkbox"  id="chkboxBtn7">
+    								<span>Btn 8:</span>
+    								<input type="checkbox"  id="chkboxBtn8">
+								</p>
+								<p class="lead">
+    								<span>Btn 9:</span>
+    								<input type="checkbox"  id="chkboxBtn9">
+    								<span>Btn 10:</span>
+    								<input type="checkbox"  id="chkboxBtn10">
+    								<span>Btn 11:</span>
+    								<input type="checkbox"  id="chkboxBtn11">
+    							</p>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="col-md-4">
+    					<div class="diagnostics">
+    						<img src="img/Telemetry.png">
+    						<h3>Telemetry</h3>
+    						<div class="border border-warning col-md-12"id="Axes">
+    							<p class="lead">
+    								<span>Temperature: </span>
+    								<span id="temp">60 C</span>
+    							</p>
+    							<p class="lead">
+    								<span>Current Draw: </span>
+    								<span id="current">50 A</span>
+    							</p>
+    						</div>
+    						<div class="border border-warning col-md-12"id="Axes">
+    							<label>IMU</label>
+    							<p class="lead">
+    								<span>X-axis</span>
+    								<span id="imuX">90 deg</span>
+    							</p>
+    							<p class="lead">
+    								<span>Y-axis</span>
+    								<span id="imuY">0 deg</span>
+    							</p>
+    							<p class="lead">
+    								<span>Z-axis</span>
+    								<span id="imuZ">0 deg</span>
+    							</p>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="col-md-4">
+    					<div class="diagnostics">
+    						<img src="img/rov.png">
+    						<h3>ROV</h3>
+    						<div class="border border-warning"id="Axes">
+								<div class="row">
+									<div class="col-md-6">
+										<p class="lead">
+											<span class="ml-0">Motor 0:</span>
+											<span id="motor-0">1500</span>
+										</p>
+										<p class="lead">
+											<span class="ml-0">Motor 1:</span>
+    										<span id="motor-1">1500</span>
+										</p>
+										<p class="lead">
+											<span>Motor 2:</span>
+    										<span id="motor-2">1500</span>
+										</p>
+										<p class="lead">
+											<span>Motor 3:</span>
+    										<span id="motor-3">1500</span>
+										</p>
+										<p class="lead">
+											<span>Motor 4:</span>
+    										<span id="motor-4">1500</span>
+										</p>
+										<p class="lead">
+											<span>Motor 5:</span>
+    										<span id="motor-5">1500</span>
+										</p>				
+									</div>
+									<div class="col-md-6">
+										<p class="lead">
+											<span>Gripper:</span>
+    										<input type="checkbox"  id="chkboxgripper">
+										</p>
+										<p class="lead">
+											<span>arm 2:</span>
+    										<input type="checkbox"  id="chkboxgripper">
+										</p>
+										<p class="lead">
+											<span> P-constant:</span>
+    										<input type="numbers" size="2rem" id="test" placeholder="1.35">
+										</p>
+										<p class="lead">
+											<span> I-constant:</span>
+    										<input type="numbers" size="2rem" id="test" placeholder="0.35">
+										</p>
+										<p class="lead">
+											<span> D-constant:</span>
+    										<input type="numbers" size="2rem" id="test" placeholder="-1.3">
+										</p>								
+									</div>
+								</div>
+    						</div>
+    						<div class="border border-warning"id="motors">
+    							<p class="lead">
+    								<span>Max speed:</span>
+    								<input type="numbers" size="2rem" id="test" placeholder="400">
+    							</p>
+    							
+    						</div>
+    					</div>
+    				</div>
+    			</div> <!---End Row-->
+    		</div>
+    	</div>
+    </div>
+    <!--- End Diagnostics Section-->
+
+    <!--- Start Task1 Section-->
+    <div id="task1" class="offset">
+    	
+    </div>
+    <!--- End Task1 Section-->
+
+    <!--- Start Task2 Section-->
+    <div id="task2" class="offset">
+    	
+    </div>
+    <!--- End Task2 Section-->
+
+    <!--- Start Task3 Section-->
+    <div id="task3" class="offset">
+    	
+    </div>
+    <!--- End Task3 Section-->
+
+	<!--- Script Source Files -->
+    <script src="window.js"></script>
+	<script src="gamepad.js"></script>
+	<script src="script.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<!--- End of Script Source Files -->
+  </body>
+</html>

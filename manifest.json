@@ -1,0 +1,23 @@
+{
+  "name": "سعيد ابو قلب حديد",
+  "description": "adena bngrb",
+  "version": "0.1",
+  "manifest_version": 2,
+  "sockets": {
+    "udp": {
+      "send": ["*"],
+      "bind": ["*"]
+    }},
+  "permissions": [
+  "serial",
+  "nativeMessaging"],
+  "web_accessible_resources":[
+    "gamepad.js"
+  ],
+  "icons": { "16": "robo-16.png", "128": "robo-128.png" },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
